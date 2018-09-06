@@ -658,7 +658,9 @@ void GameArea::SaveBattery(bool quiet)
     // of course some games just write battery way too often for such
     // a thing to be useful
     if (emusys->emuWriteBattery(fnb.data()))
-        msg.Printf(_("Wrote battery %s"), fn.mb_str());
+        //msg.Printf(_("Wrote battery %s"), fn.mb_str());
+	// caused annoying erros in Pokemon Yellow
+	;
     else
         msg.Printf(_("Error writing battery %s"), fn.mb_str());
 

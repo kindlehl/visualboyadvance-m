@@ -1055,7 +1055,9 @@ EVT_HANDLER_MASK(ExportBatteryFile, "Export battery file...", CMDEN_GB | CMDEN_G
     wxString msg;
 
     if (panel->emusys->emuWriteBattery(fn.mb_fn_str()))
-        msg.Printf(_("Wrote battery %s"), fn.mb_str());
+        //msg.Printf(_("Wrote battery %s"), fn.mb_str());
+	//This printed stuff every few minutes in Pokemon Yellow
+	;
     else
         msg.Printf(_("Error writing battery %s"), fn.mb_str());
 
